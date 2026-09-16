@@ -7,8 +7,6 @@ Tecnológico de Monterrey
 
 Senior Care is an IoT system designed for monitoring and caring for elderly adults, combining an ESP32 microcontroller with connected sensors and a Python backend/processing layer to collect, analyze, and visualize data in real time.
 
-> ✏️ *This summary is based on the project's cover page. Fill in the actual problem the system solves (e.g. fall detection, vital sign monitoring, medication reminders, alerts to family/caregivers, etc.).*
-
 ## Authors
 
 - Regina Fernanda Portela Palacios (A01786698)
@@ -17,7 +15,6 @@ Senior Care is an IoT system designed for monitoring and caring for elderly adul
 
 ## Features
 
-> ✏️ *List the system's actual functionality, for example:*
 - [ ] Monitoring of [variable, e.g. heart rate / temperature / motion]
 - [ ] Alerts triggered by [anomalous event]
 - [ ] Real-time data dashboard / visualization
@@ -25,42 +22,35 @@ Senior Care is an IoT system designed for monitoring and caring for elderly adul
 
 ## System Architecture
 
-> ✏️ *Describe how the components communicate, for example:*
-
 ```
-[Sensors] → [ESP32] → [Communication protocol, e.g. MQTT/WiFi/HTTP] → [Python script] → [Storage / Dashboard]
+[Sensors] → [ESP32] → [Communication protocol, e.g. MQTT/WiFi/HTTP] → [Google Sites] → [Storage / Dashboard]
+
+[Python code] -> [MQTT] -> [ESP32]
 ```
 
 ## Hardware Used
 
-> ✏️ *List the physical components, for example:*
 - ESP32 microcontroller
-- Sensor(s): [e.g. MAX30102, DHT22, motion sensor, etc.]
-- [Other components: buzzer, display, battery, etc.]
+- Sensor(s): [Pulse Sensor, DHT22, motion sensor, Distance Sensor]
+- [Other components: buzzer, display, battery, LEDs]
 
 ## Software & Technologies
 
 - **Firmware:** Arduino / MicroPython (ESP32)
-- **Backend / data processing:** Python
+- **Backend / data processing:** Python / ArduinoIDE
 - **Project website:** Google Sites
 
 ## Repository Structure
 
-> ✏️ *Adjust this section to match how you organize the files once uploaded to the repo, for example:*
-
 ```
-├── esp32/          # Microcontroller code
-├── python/         # Backend / data processing scripts
-├── docs/           # Documentation and report
+├── ArduinoCode/          # Microcontroller code
+├── Documentation/        # Documentation and report
+├── PythonCode/           # Python Signals sent
 └── README.md
 ```
-
-## Installation & Usage
-
 ### Prerequisites
 - [ ] Arduino IDE or PlatformIO set up for ESP32
 - [ ] Python 3.x installed
-- [ ] Required libraries: `pip install -r requirements.txt`
 
 ### Steps
 1. Flash the code in `esp32/` to the microcontroller.
